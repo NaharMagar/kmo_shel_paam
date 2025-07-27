@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>כמו של פעם</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Varela Round', sans-serif;
+      background-color: #fcdee0;
+      color: #2c2c2c;
+      text-align: center;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      max-width: 100%;
+      width: 400px;
+      margin: 0 auto 10px auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #4a2c91;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      margin: 5px;
+      font-size: 1.1em;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #361d6f;
+    }
+
+    .main-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      width: 33.33%;
+    }
+
+    .image-wrapper {
+      width: 100%;
+    }
+
+    .image-wrapper img {
+      width: 60%;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .image-wrapper img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lightbox effect */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      .main-grid {
+        flex-direction: column;
+      }
+
+      .column {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .image-wrapper {
+        width: 90%;
+      }
+
+      .logo {
+        width: 120%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lightbox popups -->
+  <div id="lightbox1" class="lightbox"><a href="#"><img src="img1.jpeg"></a></div>
+  <div id="lightbox2" class="lightbox"><a href="#"><img src="img2.jpeg"></a></div>
+  <div id="lightbox3" class="lightbox"><a href="#"><img src="img3.jpeg"></a></div>
+  <div id="lightbox4" class="lightbox"><a href="#"><img src="img4.jpeg"></a></div>
+  <div id="lightbox5" class="lightbox"><a href="#"><img src="img5.jpeg"></a></div>
+  <div id="lightbox6" class="lightbox"><a href="#"><img src="img6.jpeg"></a></div>
+
+  <!-- Main content -->
+  <div class="main-grid fade-in">
+    <!-- Left column -->
+    <div class="column">
+      <div class="image-wrapper"><a href="#lightbox1"><img src="img1.jpeg" alt="תמונה 1"></a></div>
+      <div class="image-wrapper"><a href="#lightbox2"><img src="img2.jpeg" alt="תמונה 2"></a></div>
+      <div class="image-wrapper"><a href="#lightbox3"><img src="img3.jpeg" alt="תמונה 3"></a></div>
+    </div>
+
+    <!-- Center logo and buttons -->
+    <div style="width: 33.33%; display: flex; flex-direction: column; align-items: center;" class="fade-in">
+      <img src="logo.png" alt="כמו של פעם" class="logo">
+      <div>
+        <a class="btn" href="https://chat.whatsapp.com/Ecbyrli4oGJ8LpiLPOXsB2" target="_blank">
+          הצטרפו לקבוצת הוואטסאפ שלנו
+        </a>
+        <a class="btn" href="https://www.instagram.com/kmo_shel_paam/" target="_blank">
+          בקרו אותנו באינסטגרם
+        </a>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div class="column">
+      <div class="image-wrapper"><a href="#lightbox4"><img src="img4.jpeg" alt="תמונה 4"></a></div>
+      <div class="image-wrapper"><a href="#lightbox5"><img src="img5.jpeg" alt="תמונה 5"></a></div>
+      <div class="image-wrapper"><a href="#lightbox6"><img src="img6.jpeg" alt="תמונה 6"></a></div>
+    </div>
+  </div>
+
+</body>
+</html>
