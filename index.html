@@ -14,8 +14,15 @@
     body {
       margin: 0;
       font-family: 'Varela Round', sans-serif;
-      background-color: #fcdee0;
+      background-color: #3046a1; /* פס מסביב לכל האתר */
       color: #2c2c2c;
+    }
+
+    .site-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fcdee0;
+      padding: 20px 10px;
       text-align: center;
     }
 
@@ -53,10 +60,8 @@
     .main-grid {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      width: 100%;
       flex-wrap: wrap;
-      padding: 20px;
+      margin-top: 20px;
     }
 
     .column {
@@ -118,12 +123,11 @@
 
       .column {
         width: 100%;
-        flex-direction: column;
-        gap: 15px;
       }
 
       .image-wrapper {
         width: 85%;
+        margin-bottom: 15px;
       }
 
       .logo {
@@ -142,33 +146,30 @@
 </head>
 <body>
 
+<div class="site-wrapper fade-in">
   <!-- Lightbox popups -->
   <div id="lightbox1" class="lightbox"><a href="#"><img src="img1.jpeg"></a></div>
   <div id="lightbox2" class="lightbox"><a href="#"><img src="img2.jpeg"></a></div>
   <div id="lightbox4" class="lightbox"><a href="#"><img src="img4.jpeg"></a></div>
   <div id="lightbox6" class="lightbox"><a href="#"><img src="img6.jpeg"></a></div>
 
-  <!-- Main content -->
-  <div class="main-grid fade-in">
-    <!-- Left column -->
+  <!-- לוגו וכפתורים -->
+  <img src="logo.png" alt="כמו של פעם" class="logo">
+  <a class="btn" href="https://chat.whatsapp.com/Ecbyrli4oGJ8LpiLPOXsB2" target="_blank">הצטרפו לקבוצת הוואטסאפ שלנו</a>
+  <a class="btn" href="https://www.instagram.com/kmo_shel_paam/" target="_blank">בקרו אותנו באינסטגרם</a>
+
+  <!-- תמונות -->
+  <div class="main-grid">
     <div class="column">
       <div class="image-wrapper"><a href="#lightbox1"><img src="img1.jpeg" alt="תמונה 1"></a></div>
       <div class="image-wrapper"><a href="#lightbox2"><img src="img2.jpeg" alt="תמונה 2"></a></div>
     </div>
-
-    <!-- Center logo and buttons -->
-    <div style="width: 33.33%; display: flex; flex-direction: column; align-items: center;" class="fade-in">
-      <img src="logo.png" alt="כמו של פעם" class="logo">
-      <a class="btn" href="https://chat.whatsapp.com/Ecbyrli4oGJ8LpiLPOXsB2" target="_blank">הצטרפו לקבוצת הוואטסאפ שלנו</a>
-      <a class="btn" href="https://www.instagram.com/kmo_shel_paam/" target="_blank">בקרו אותנו באינסטגרם</a>
-    </div>
-
-    <!-- Right column -->
     <div class="column">
       <div class="image-wrapper"><a href="#lightbox4"><img src="img4.jpeg" alt="תמונה 4"></a></div>
       <div class="image-wrapper"><a href="#lightbox6"><img src="img6.jpeg" alt="תמונה 6"></a></div>
     </div>
   </div>
+</div>
 
 </body>
 </html>
