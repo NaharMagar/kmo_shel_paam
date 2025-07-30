@@ -137,6 +137,35 @@
       display: flex;
     }
 
+    .lottery-banner {
+      background: linear-gradient(90deg, #8e5cdf, #fad0c4);
+      color: #3046a1;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: pulse 2s infinite;
+}
+
+    .lottery-title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #3046a1;
+    }
+
+    .lottery-text {
+      font-size: 1.3em;
+    }
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.02); opacity: 0.95; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+
     @media (max-width: 768px) {
       .main-grid {
         flex-direction: column;
@@ -173,6 +202,13 @@
   <!-- לוגו וכפתורים -->
   <div class="top-section">
     <img src="logo.png" alt="כמו של פעם" class="logo">
+    <!-- <div class="lottery-banner">
+  🎉 שימו לב! כל עוקב חדש באינסטגרם שלנו החל מהתאריך 30.7.25 ייכנס להגרלה על שלושה כרטיסים למסיבה הבאה שלנו! (והמושקעת מאוד מאוד)🎁
+    </div> -->
+    <div class="lottery-banner">
+    <div class="lottery-title">שימו לב!</div>
+    <div class="lottery-text">🎉 כל עוקב חדש באינסטגרם שלנו החל מהתאריך 30.7.25 ייכנס להגרלה על שלושה כרטיסים למסיבה הבאה שלנו! (והמושקעת מאוד מאוד)🎉</div>
+</div>
     <a class="btn" href="https://chat.whatsapp.com/Ecbyrli4oGJ8LpiLPOXsB2" target="_blank">הצטרפו לקבוצת הוואטסאפ שלנו</a>
     <a class="btn" href="https://www.instagram.com/kmo_shel_paam/" target="_blank">בקרו אותנו באינסטגרם</a>
     <a class="btn" href="https://chat.whatsapp.com/ISlstLEVuVEHx0oAiSMJTc" target="_blank">למקרה והקבוצה הראשונה מלאה</a>
